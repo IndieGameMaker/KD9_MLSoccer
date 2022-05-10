@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Policies;
+using Unity.MLAgents.Sensors;
+using Unity.MLAgents.Actuators;
 
 public class PlayerAgent : Agent
 {
@@ -45,8 +47,31 @@ public class PlayerAgent : Agent
                         | RigidbodyConstraints.FreezeRotationZ;
 
         GetComponent<Renderer>().material = materials[(int)team];
-        InitPlayer();
         MaxStep = 10000;
+    }
+
+    public override void OnEpisodeBegin()
+    {
+        // 플레이어의 초기화
+        InitPlayer();
+
+        // 물리엔진 초기화
+        rb.velocity = rb.angularVelocity = Vector3.zero;
+    }
+
+    public override void CollectObservations(VectorSensor sensor)
+    {
+
+    }
+
+    public override void OnActionReceived(ActionBuffers actions)
+    {
+
+    }
+
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+
     }
 
     public void InitPlayer()

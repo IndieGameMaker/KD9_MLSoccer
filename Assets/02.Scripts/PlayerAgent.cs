@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
+using Unity.MLAgents.Policies;
 
 public class PlayerAgent : Agent
 {
@@ -11,6 +12,8 @@ public class PlayerAgent : Agent
     }
 
     public Team team;
+
+    private BehaviorParameters bps;
 
     //플레이어의 초기 위치
     public Vector3 initPosBlue = new Vector3(-5.5f, 0.5f, 0.0f);
@@ -25,6 +28,9 @@ public class PlayerAgent : Agent
 
     public override void Initialize()
     {
+        bps = GetComponent<BehaviorParameters>();
+        bps.TeamId = (int)team;
+
         GetComponent<Renderer>().material = materials[(int)team];
         InitPlayer();
     }

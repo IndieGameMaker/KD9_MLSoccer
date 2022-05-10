@@ -2294,7 +2294,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  team: 1
+  team: 0
   moveSpeed: 1
   kickForce: 800
   initPosBlue: {x: -5.5, y: 0.5, z: 0}

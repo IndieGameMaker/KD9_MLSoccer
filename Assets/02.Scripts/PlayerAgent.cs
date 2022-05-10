@@ -132,4 +132,15 @@ public class PlayerAgent : Agent
         transform.localRotation = (team == Team.BLUE) ? initRotBlue : initRotRed;
     }
 
+    void OnCollisionEnter(Collision coll)
+    {
+        if (coll.collider.CompareTag("ball"))
+        {
+            // 볼 터치시 + 리워드
+            AddReward(0.2f);
+            // 볼과 에이전트의 충돌지점(ContactPoint)를 활용해 방향벡터를 계산
+            Vector3 shootDir = coll.GetContact(0).point - transform.position;
+            coll.gameObject.GetComponent<Rigidbody>().AddForce(shootDir.normalized * kickForce);
+        }
+    }
 }

@@ -2123,7 +2123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5306394515949851849}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -5.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: -2.84, y: 0.5, z: 4.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2291,7 +2291,11 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  team: 0
+  team: 1
+  initPosBlue: {x: -5.5, y: 0.5, z: 0}
+  initPosRed: {x: 5.5, y: 0.5, z: 0}
+  initRotBlue: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+  initRotRed: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
   materials:
   - {fileID: 2100000, guid: c9fa44c2c3f8ce74ca39a3355ea42631, type: 2}
   - {fileID: 2100000, guid: b0da1813c36914e678ba57f2790424e1, type: 2}

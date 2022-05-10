@@ -71,6 +71,26 @@ public class PlayerAgent : Agent
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
+        // 이산값으로 파라메터 정의
+        var actions = actionsOut.DiscreteActions;
+        // 파라메터 초기화
+        actions.Clear();
+
+        // Branch[0]
+        // Branch Size = 3
+        // 정지, 전진, 후진 (0, 1, 2) 이동 => 키보드 Non, W, S
+        if (Input.GetKey(KeyCode.W)) actions[0] = 1;
+        if (Input.GetKey(KeyCode.S)) actions[0] = 2;
+
+        // Branch[1]
+        // 정지, 좌, 우 (0, 1, 2) 이동 => 키보드 Non, Q, E
+        if (Input.GetKey(KeyCode.Q)) actions[1] = 1;
+        if (Input.GetKey(KeyCode.E)) actions[1] = 2;
+
+        // Branch[2]
+        // 정지, 좌, 우 (0, 1, 2) 회전 => 키보드 Non, A, D
+        if (Input.GetKey(KeyCode.A)) actions[2] = 1;
+        if (Input.GetKey(KeyCode.D)) actions[2] = 2;
 
     }
 

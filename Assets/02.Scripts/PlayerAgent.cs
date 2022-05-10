@@ -17,6 +17,8 @@ public class PlayerAgent : Agent
     public Vector3 initPosRed = new Vector3(+5.5f, 0.5f, 0.0f);
 
     //플레이어의 초기 회전값
+    public Quaternion initRotBlue = Quaternion.Euler(Vector3.up * 90);
+    public Quaternion initRotRed = Quaternion.Euler(Vector3.up * -90);
 
     //플레이어의 색상 변경할 머티리얼
     public Material[] materials;

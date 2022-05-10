@@ -36,8 +36,17 @@ public class PlayerAgent : Agent
         bps = GetComponent<BehaviorParameters>();
         bps.TeamId = (int)team;
 
+        rb = GetComponent<Rigidbody>();
+        rb.mass = 10.0f;
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+
+        rb.constraints = RigidbodyConstraints.FreezePositionY
+                        | RigidbodyConstraints.FreezeRotationX
+                        | RigidbodyConstraints.FreezeRotationZ;
+
         GetComponent<Renderer>().material = materials[(int)team];
         InitPlayer();
+        MaxStep = 10000;
     }
 
     public void InitPlayer()

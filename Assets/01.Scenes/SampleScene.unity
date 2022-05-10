@@ -451,8 +451,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.0010822983, y: 0.7989119, z: -0.6014453, w: 0.0014393235}
+  m_LocalPosition: {x: -1.530752, y: 20.490997, z: 5.792278}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -952,7 +952,7 @@ GameObject:
   - component: {fileID: 65269913215784834}
   m_Layer: 0
   m_Name: GoalNetPurple
-  m_TagString: RED_GOAL
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1215,7 +1215,7 @@ GameObject:
   - component: {fileID: 65915005796037948}
   m_Layer: 0
   m_Name: GoalNetBlue
-  m_TagString: BLUE_GOAL
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1400,7 +1400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682753270449748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2560,6 +2560,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d3236dd435a401d94833c870af120b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players:
+  - {fileID: 5328125447216626066}
+  - {fileID: 987721696}
+  blueScore: 0
+  redScore: 0
 --- !u!1 &5306394515949851849
 GameObject:
   m_ObjectHideFlags: 0

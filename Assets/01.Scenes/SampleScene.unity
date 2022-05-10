@@ -1959,6 +1959,8 @@ GameObject:
   - component: {fileID: 5328125447216626065}
   - component: {fileID: 5328125447216626067}
   - component: {fileID: 5328125447216626066}
+  - component: {fileID: 5328125447216626069}
+  - component: {fileID: 5328125447216626068}
   m_Layer: 0
   m_Name: AgentBlue
   m_TagString: Untagged
@@ -2330,6 +2332,35 @@ MonoBehaviour:
   m_UseChildActuators: 1
   m_DeterministicInference: 0
   m_ObservableAttributeHandling: 0
+--- !u!65 &5328125447216626068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306394515949851849}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: -0.00000047683716, y: 0, z: 0}
+--- !u!54 &5328125447216626069
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306394515949851849}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!23 &5328437309380953125
 MeshRenderer:
   m_ObjectHideFlags: 0

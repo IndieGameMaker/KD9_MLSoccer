@@ -14,6 +14,11 @@ public class PlayerAgent : Agent
     public Team team;
 
     private BehaviorParameters bps;
+    private Rigidbody rb;
+
+    // 이동속도, 킥파워
+    public float moveSpeed = 1.0f;
+    public float kickForce = 800.0f;
 
     //플레이어의 초기 위치
     public Vector3 initPosBlue = new Vector3(-5.5f, 0.5f, 0.0f);

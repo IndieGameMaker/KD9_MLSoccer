@@ -23,4 +23,16 @@ public class PlayerAgent : Agent
     //플레이어의 색상 변경할 머티리얼
     public Material[] materials;
 
+    public override void Initialize()
+    {
+        GetComponent<Renderer>().material = materials[(int)team];
+        InitPlayer();
+    }
+
+    public void InitPlayer()
+    {
+        transform.localPosition = (team == Team.BLUE) ? initPosBlue : initPosRed;
+        transform.localRotation = (team == Team.BLUE) ? initRotBlue : initRotRed;
+    }
+
 }

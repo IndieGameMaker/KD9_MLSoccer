@@ -68,7 +68,37 @@ public class PlayerAgent : Agent
     {
         var action = actions.DiscreteActions;
 
-        print($"[0]={action[0]}, [1]={action[1]}, [2]={action[2]}");
+        //print($"[0]={action[0]}, [1]={action[1]}, [2]={action[2]}");
+
+        // 이동벡터
+        Vector3 dir = Vector3.zero;
+        // 회전벡터
+        Vector3 rot = Vector3.zero;
+
+        int forward = action[0];
+        int right = action[1];
+        int rotate = action[2];
+
+        switch (forward)
+        {
+            case 1: dir = transform.forward; break;
+            case 2: dir = -transform.forward; break;
+        }
+
+        switch (right)
+        {
+            case 1: dir = -transform.right; break; //왼쪽
+            case 2: dir = transform.right; break;  //오른쪽
+        }
+
+        switch (rotate)
+        {
+            case 1: rot = -transform.up; break;
+            case 2: rot = transform.up; break;
+        }
+
+        transform.Rotate(rot, Time.fixedDeltaTime * 100.0f);
+        rb.AddForce(dir * moveSpeed, ForceMode.VelocityChange);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)

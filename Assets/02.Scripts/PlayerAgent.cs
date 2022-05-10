@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.MLAgents;
 
-public class PlayerAgent : MonoBehaviour
+public class PlayerAgent : Agent
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum Team
     {
-        
+        BLUE = 0, RED
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Team team;
+
+    //플레이어의 색상 변경할 머티리얼
+    public Material[] materials;
+
 }

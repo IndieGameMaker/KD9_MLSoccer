@@ -66,7 +66,9 @@ public class PlayerAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
+        var action = actions.DiscreteActions;
 
+        print($"[0]={action[0]}, [1]={action[1]}, [2]={action[2]}");
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
